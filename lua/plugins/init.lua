@@ -16,6 +16,7 @@
 local load_plugins = function()
     require("plugins.nvim-treesitter")
     require("plugins.lualine")
+    require("plugins.nvim-tree")
 end
 
 
@@ -48,6 +49,14 @@ require('packer').startup(function()
 
     -- Icon
     use 'kyazdani42/nvim-web-devicons'
+
+    -- File explorer
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+            'kyazdani42/nvim-web-devicons', -- optional, for file icon
+        }
+    }
 
     -- Treesitter interface
     use 'nvim-treesitter/nvim-treesitter'

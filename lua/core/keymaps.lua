@@ -44,3 +44,11 @@ map('n', '<C-j>', ':lua win_move("j")<CR>')
 map('n', '<C-k>', ':lua win_move("k")<CR>')
 map('n', '<C-l>', ':lua win_move("l")<CR>')
 
+-------------------------------------------------
+-- Applications and Plugins keymaps
+-------------------------------------------------
+
+-- Nvim-tree
+map('n', '<C-n>', ':NvimTreeToggle<CR>')        -- open/close
+map('n', '<leader>r', ':NvimTreeRefresh<CR>')   -- refresh
+map('n', '<leader>n', ':NvimTreeFindFile<CR>')  -- search file
