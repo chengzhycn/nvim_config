@@ -6,7 +6,7 @@
 --- OneDark styles: dark, darker, cool, deep, warm, warmer, light
 --- url: https://github.com/navarasu/onedark.nvim
 require('onedark').setup {
-    style = 'darker'
+    style = 'warm'
 }
 require('onedark').load()
 
