@@ -17,13 +17,13 @@ local load_plugins = function()
     require("plugins.nvim-treesitter")
     require("plugins.lualine")
     require("plugins.nvim-tree")
+    require("plugins.themes")
 end
 
 
 -------------------------------------------------
 -- Startup
 -------------------------------------------------
-
 
 local fn = vim.fn
 
@@ -61,6 +61,14 @@ require('packer').startup(function()
     -- Treesitter interface
     use 'nvim-treesitter/nvim-treesitter'
 
+    -- Autopair
+    use {
+        'windwp/nvim-autopairs',
+        config = function()
+            require('nvim-autopairs').setup()
+        end
+    }
+
     -- Color schemes
     use 'navarasu/onedark.nvim'
 
@@ -71,4 +79,6 @@ require('packer').startup(function()
     end
 end)
 
-return load_plugins()
+if not packer_bootstrap then
+    return load_plugins()
+end
