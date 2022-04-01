@@ -6,10 +6,10 @@
 ### lspconfig
 
 ```
-# Go 
+# Go
 go install golang.org/x/tools/gopls@latest
 
-# Bash 
+# Bash
 cnpm i -g bash-language-server
 
 # Python
@@ -34,7 +34,34 @@ curl -L https://ghproxy.com/https://github.com/sumneko/lua-language-server/relea
 ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-language-server
 ```
 
+## Plugins
+
+* [packer.nvim](https://github.com/wbthomason/packer.nvim) - A use-package inspired plugin manager for Neovim
+
+* [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure Neovim statusline written in Lua
+
+* [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - A collection of common configurations for Neovim's built-in language server client
+
+* [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Auto completion plugin
+
+* [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) - A File Explorer written In Lua
+
+* [indentBlankline](https://github.com/lukas-reineke/indent-blankline.nvim) - Adds indentation guides to all lines (including empty lines)
+
+* [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - A super powerful autopairs for Neovim
+
+* [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Nvim Treesitter configurations and abstraction layer
+
+* [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - A Lua fork of vim-devicons
+
 ## Usage
 
 ```bash
 git clone https://ghproxy.com/https://github.com/chengzhycn/nvim_config.git ~/.config/nvim/
+```
+
+## Reference
+
+* https://github.com/brainfucksec/neovim-lua
+* https://github.com/ayamir/nvimdots/tree/main
+* https://github.com/LunarVim/LunarVim

@@ -4,6 +4,9 @@
 
 local g = vim.g                 -- Global variables
 local opt = vim.opt             -- Set options
+local cmd = vim.cmd             -- Execute Vim commands
+local exec = vim.api.nvim_exec 	-- Execute Vimscript
+local fn = vim.fn               -- Call Vim functions
 
 -------------------------------------------------
 -- Neovim UI
@@ -30,3 +33,45 @@ opt.smartcase = true            -- Ignore lowercase for whole pattern
 -- Startup
 -------------------------------------------------
 opt.shortmess:append "sI"       -- Disable nvim intro
+
+-- Disable builtins plugins
+local disabled_built_ins = {
+    "netrw",
+    "netrwPlugin",
+    "netrwSettings",
+    "netrwFileHandlers",
+    "gzip",
+    "zip",
+    "zipPlugin",
+    "tar",
+    "tarPlugin",
+    "getscript",
+    "getscriptPlugin",
+    "vimball",
+    "vimballPlugin",
+    "2html_plugin",
+    "logipat",
+    "rrhelper",
+    "spellfile_plugin",
+    "matchit"
+}
+
+for _, plugin in pairs(disabled_built_ins) do
+    g["loaded_" .. plugin] = 1
+end
+
+-------------------------------------------------
+-- Autocommands
+-------------------------------------------------
+
+-- Remove whitespace on save
+cmd [[autocmd BufWritePre * :%s/\s\+$//e]]
+
+-- Don't auto commenting new lines
+cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]]
+
+-- Remove line lenght marker for selected filetypes
+cmd [[
+autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
+]]
+

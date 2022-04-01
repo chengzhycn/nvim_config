@@ -53,6 +53,9 @@ require('packer').startup(function()
         },
     }
 
+    -- Indent line
+    use "lukas-reineke/indent-blankline.nvim"
+
     -- Statusline
     use {
         'nvim-lualine/lualine.nvim',
