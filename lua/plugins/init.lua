@@ -20,6 +20,7 @@ local load_plugins = function()
     require("plugins.themes")
     require("plugins.nvim-lspconfig")
     require("plugins.nvim-cmp")
+    require("plugins.gitsigns")
 end
 
 
@@ -64,6 +65,9 @@ require('packer').startup(function()
 
     -- Icon
     use 'kyazdani42/nvim-web-devicons'
+
+    -- Git
+    use 'lewis6991/gitsigns.nvim'
 
     -- File explorer
     use {

@@ -54,6 +54,8 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 
 * [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - A Lua fork of vim-devicons
 
+* [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Super fast git decorations implemented purely in lua/teal
+
 ## Usage
 
 ```bash
