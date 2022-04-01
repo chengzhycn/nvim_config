@@ -102,3 +102,8 @@ require'nvim-tree'.setup {
     },
   },
 }
+
+-- Automatically close the tab/vim when nvim-tree is the last window in the tab.
+vim.api.nvim_exec([[
+    autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+]], false)

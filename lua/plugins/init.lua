@@ -18,6 +18,8 @@ local load_plugins = function()
     require("plugins.lualine")
     require("plugins.nvim-tree")
     require("plugins.themes")
+    require("plugins.nvim-lspconfig")
+    require("plugins.nvim-cmp")
 end
 
 
@@ -40,6 +42,16 @@ require('packer').startup(function()
 
     -- Collection of configurations for the built-in LSP client
     use 'neovim/nvim-lspconfig'
+
+    -- Autocomplete
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-buffer',
+        },
+    }
 
     -- Statusline
     use {
