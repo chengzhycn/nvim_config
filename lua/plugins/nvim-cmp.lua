@@ -20,6 +20,12 @@ cmp.setup {
         keyword_length = 2
     },
 
+    snippet = {
+        expand = function(args)
+            require('luasnip').lsp_expand(args.body)
+        end,
+    },
+
     -- Key mapping
     mapping = {
         ['<C-n>'] = cmp.mapping.select_next_item(),

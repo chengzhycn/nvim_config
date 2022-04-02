@@ -44,6 +44,8 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 
 * [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Auto completion plugin
 
+* [LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet Engine for Neovim written in Lua
+
 * [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) - A File Explorer written In Lua
 
 * [indentBlankline](https://github.com/lukas-reineke/indent-blankline.nvim) - Adds indentation guides to all lines (including empty lines)
@@ -55,6 +57,14 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 * [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - A Lua fork of vim-devicons
 
 * [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Super fast git decorations implemented purely in lua/teal
+
+### Install plugins manually
+
+```bash
+git clone https://ghproxy.com/http://github.com/L3MON4D3/LuaSnip.git ~/.local/share/nvim/site/pack/packer/start/LuaSnip
+
+nvim +PackerSync
+```
 
 ## Usage
 
