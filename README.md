@@ -61,7 +61,7 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 ### Install plugins manually
 
 ```bash
-git clone https://ghproxy.com/http://github.com/L3MON4D3/LuaSnip.git ~/.local/share/nvim/site/pack/packer/start/LuaSnip
+git clone https://ghproxy.com/https://github.com/L3MON4D3/LuaSnip.git ~/.local/share/nvim/site/pack/packer/start/LuaSnip
 
 nvim +PackerSync
 ```
