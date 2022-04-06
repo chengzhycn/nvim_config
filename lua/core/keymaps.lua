@@ -53,7 +53,7 @@ map('n', '<C-n>', ':NvimTreeToggle<CR>')        -- open/close
 map('n', '<leader>r', ':NvimTreeRefresh<CR>')   -- refresh
 map('n', '<leader>n', ':NvimTreeFindFile<CR>')  -- search file
 
--- default mappings
+--- default mappings
 local list = {
   { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
   { key = "<C-e>",                        action = "edit_in_place" },
@@ -94,3 +94,11 @@ local list = {
   { key = "<C-k>",                        action = "toggle_file_info" },
   { key = ".",                            action = "run_file_command" }
 }
+
+-- LeaderF
+map('n', '<F2>', ":LeaderfFunction!<CR>")       -- view mode for functions
+map('n', '<F3>', ":LeaderfFunction<CR>")        -- fuzzy mode for functions
+map('n', '<F4>', ":LeaderfBuffer<CR>")          -- fuzzy mode for buffer
+map('n', '<F5>', ":LeaderfFile<CR>")            -- fuzzy mode for file
+
+map('n', '<leader>g', ":Leaderf rg")            -- ripgrep search

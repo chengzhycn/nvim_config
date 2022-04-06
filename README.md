@@ -2,6 +2,7 @@
 ## Prerequisites
 * [neovim](https://github.com/neovim/neovim/releases) >= v0.6.1
 * [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) - for icons
+* [ripgrep](https://github.com/BurntSushi/ripgrep) = for `Leaderf rg`
 
 ### lspconfig
 
@@ -57,6 +58,31 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 * [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - A Lua fork of vim-devicons
 
 * [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Super fast git decorations implemented purely in lua/teal
+
+* [LeaderF](https://github.com/Yggdroot/LeaderF) - An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc.
+
+### Notice
+
+Leaderf requires python support(see [Leaderf#Requirements](https://github.com/Yggdroot/LeaderF#requirements)). We can check this by using command beblow in vim:
+
+```
+:echo has("python3")
+:echo has("python")
+```
+
+If results are 0, we can use command below to add these support for **neovim**:
+
+```
+pip2 install --user --upgrade neovim
+pip3 install --user --upgrade neovim
+```
+
+See [如何使用 Python 编写 vim 插件](https://www.v2ex.com/t/410079).
+
+TODO: auto install cextensions when initializing.
+```
+:LeaderfInstallCExtension
+```
 
 ### Install plugins manually
 

@@ -13,16 +13,6 @@
 -- Plugins config
 -------------------------------------------------
 
-local load_plugins = function()
-    require("plugins.nvim-treesitter")
-    require("plugins.lualine")
-    require("plugins.nvim-tree")
-    require("plugins.themes")
-    require("plugins.nvim-lspconfig")
-    require("plugins.nvim-cmp")
-    require("plugins.gitsigns")
-end
-
 
 -------------------------------------------------
 -- Startup
@@ -78,6 +68,8 @@ require('packer').startup(function()
         }
     }
 
+    use 'Yggdroot/LeaderF'
+
     -- Treesitter interface
     use 'nvim-treesitter/nvim-treesitter'
 
@@ -98,6 +90,17 @@ require('packer').startup(function()
         require('packer').sync()
     end
 end)
+
+local load_plugins = function()
+    require("plugins.nvim-treesitter")
+    require("plugins.lualine")
+    require("plugins.nvim-tree")
+    require("plugins.themes")
+    require("plugins.nvim-lspconfig")
+    require("plugins.nvim-cmp")
+    require("plugins.gitsigns")
+    require("plugins.leaderf")
+end
 
 if not packer_bootstrap then
     return load_plugins()
