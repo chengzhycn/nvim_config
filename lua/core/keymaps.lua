@@ -100,5 +100,6 @@ map('n', '<F2>', ":LeaderfFunction!<CR>")       -- view mode for functions
 map('n', '<F3>', ":LeaderfFunction<CR>")        -- fuzzy mode for functions
 map('n', '<F4>', ":LeaderfBuffer<CR>")          -- fuzzy mode for buffer
 map('n', '<F5>', ":LeaderfFile<CR>")            -- fuzzy mode for file
+map('n', '<F6>', ":LeaderfMru<CR>")             -- fuzzy mode for mru file
 
 map('n', '<leader>g', ":Leaderf rg")            -- ripgrep search

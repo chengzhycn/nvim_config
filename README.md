@@ -61,6 +61,8 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 
 * [LeaderF](https://github.com/Yggdroot/LeaderF) - An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc.
 
+* [alpha-nvim](https://github.com/goolord/alpha-nvim) - A fast and fully customizable greeter for neovim
+
 ### Notice
 
 Leaderf requires python support(see [Leaderf#Requirements](https://github.com/Yggdroot/LeaderF#requirements)). We can check this by using command beblow in vim:
