@@ -112,3 +112,13 @@ for _, lsp in ipairs(servers) do
         }
     }
 end
+
+-- Auto format on save.
+vim.api.nvim_exec([[
+    autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 1000)
+
+    autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
+
+    autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
+
+]], false)

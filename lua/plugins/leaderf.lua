@@ -19,5 +19,6 @@ g.Lf_NormalMap = {
     Function = {{"<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>'}},
     Colorscheme = {{"<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>'}},
 }
+g.Lf_WindowPosition = 'popup'
 
 cmd [[autocmd VimEnter * ++once Leaderf]]
