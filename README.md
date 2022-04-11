@@ -65,26 +65,29 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 
 ### Notice
 
-Leaderf requires python support(see [Leaderf#Requirements](https://github.com/Yggdroot/LeaderF#requirements)). We can check this by using command beblow in vim:
+* Leaderf requires python support(see [Leaderf#Requirements](https://github.com/Yggdroot/LeaderF#requirements)). We can check this by using command beblow in vim:
 
-```
-:echo has("python3")
-:echo has("python")
-```
+> ```
+> :echo has("python3")
+> :echo has("python")
+> ```
+>
+> If results are 0, we can use command below to add these support for **neovim**:
+>
+>
+> ```
+> pip2 install --user --upgrade neovim
+> pip3 install --user --upgrade neovim
+> ```
+>
+> See [如何使用 Python 编写 vim 插件](https://www.v2ex.com/t/410079).
+>
+> TODO: auto install cextensions when initializing.
+> ```
+> :LeaderfInstallCExtension
+> ```
 
-If results are 0, we can use command below to add these support for **neovim**:
-
-```
-pip2 install --user --upgrade neovim
-pip3 install --user --upgrade neovim
-```
-
-See [如何使用 Python 编写 vim 插件](https://www.v2ex.com/t/410079).
-
-TODO: auto install cextensions when initializing.
-```
-:LeaderfInstallCExtension
-```
+* Copy the .clang-format file to the $HOME or root directory if you want to set IndentWidth to 4.
 
 ### Install plugins manually
 

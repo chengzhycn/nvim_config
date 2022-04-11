@@ -100,16 +100,24 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches.
 -- Add your language server below:
-local servers = { 'bashls', 'pyright', 'clangd', 'gopls', 'rust_analyzer', 'sumneko_lua' }
+local servers = {
+    pyright = {"pyright-langserver", "--stdio"},
+    bashls = {"bash-language-server", "start"},
+    clangd = {"clangd", "-fallback-style=Google"},
+    gopls = {"gopls"},
+    rust_analyzer = {"rust_analyzer"},
+    sumneko_lua = {"lua-language-server"}
+}
 
 -- Call setup
-for _, lsp in ipairs(servers) do
+for lsp, cmd in pairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
         capabilities = capabilities,
         flags = {
             debounce_text_changes = 150,
-        }
+        },
+        cmd = cmd
     }
 end
 
@@ -120,5 +128,7 @@ vim.api.nvim_exec([[
     autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
 
     autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
+
+    autocmd BufWritePre *.c lua vim.lsp.buf.formatting_sync(nil, 1000)
 
 ]], false)

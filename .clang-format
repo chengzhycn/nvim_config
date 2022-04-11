@@ -1,0 +1,5 @@
+---
+# We'll use defaults from the Google style, but with 4 columns indentation.
+# This file should be copied to the $HOME or the root directory.
+BasedOnStyle: Google
+IndentWidth: 4
