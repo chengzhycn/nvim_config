@@ -18,7 +18,16 @@ require('lualine').setup {
     sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'b:gitsigns_status', 'diagnostics'},
-        lualine_c = {'filename'},
+        lualine_c = {
+            {
+                'filename',
+                path = 2,               -- 0: Just the filename
+                                        -- 1: Relative path
+                                        -- 2: Absolute path
+                shorting_target = 40,   -- Shortens path to leave 40 spaces in the window
+
+            }
+        },
         lualine_x = {'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
