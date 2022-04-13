@@ -75,3 +75,5 @@ cmd [[
 autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
 ]]
 
+-- Close quickfix list when leaving quickfix buffer
+cmd [[autocmd BufLeave * if  &buftype == "quickfix" | q | endif]]

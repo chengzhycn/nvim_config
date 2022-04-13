@@ -28,7 +28,7 @@ dashboard.section.header.val = banner
 dashboard.section.buttons.val = {
     dashboard.button('e', '  New file', ':ene <BAR> startinsert<CR>'),
     dashboard.button('f', '  Find file', ':LeaderfFile<CR>'),
-    dashboard.button('r', '  Recent', ":LeaderfMru<CR>"),
+    dashboard.button('r', '  Recent', ":LeaderfMruCwd<CR>"),
     dashboard.button('s', '  Settings', ':e $MYVIMRC<CR>'),
     dashboard.button('u', '  Update plugins', ':PackerUpdate<CR>'),
     dashboard.button('q', '  Quit', ':qa<CR>'),
