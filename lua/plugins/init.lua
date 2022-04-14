@@ -24,6 +24,7 @@ local load_plugins = function()
     require("plugins.leaderf")
     require("plugins.indent-blankline")
     require("plugins.alpha-nvim")
+    require("plugins.vista")
 end
 
 -------------------------------------------------
@@ -65,6 +66,9 @@ require('packer').startup(function()
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+
+    -- Tag viewer
+    use 'liuchengxu/vista.vim'
 
     -- Icon
     use 'kyazdani42/nvim-web-devicons'

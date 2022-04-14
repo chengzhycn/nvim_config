@@ -98,8 +98,14 @@ local list = {
 -- LeaderF
 map('n', '<F2>', ":LeaderfFunction!<CR>")       -- view mode for functions
 map('n', '<F3>', ":LeaderfFunction<CR>")        -- fuzzy mode for functions
-map('n', '<F4>', ":LeaderfBuffer<CR>")          -- fuzzy mode for buffer
-map('n', '<F5>', ":LeaderfFile<CR>")            -- fuzzy mode for file
-map('n', '<F6>', ":LeaderfMru<CR>")             -- fuzzy mode for mru file
+map('n', '<leader>b', ":LeaderfBuffer<CR>")     -- fuzzy mode for buffer
+map('n', '<leader>f', ":LeaderfFile<CR>")       -- fuzzy mode for file
+map('n', '<leader>r', ":LeaderfMruCwd<CR>")     -- fuzzy mode for mru file
 
 map('n', '<leader>g', ":Leaderf rg")            -- ripgrep search
+
+-- lualine
+map('n', '<leader>j', ":LualineBuffersJump")    -- lualine buffer jump
+
+-- vista
+map('n', '<F8>', ":Vista!!<CR>")                -- toggle tag viewer

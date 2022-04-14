@@ -63,6 +63,8 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 
 * [alpha-nvim](https://github.com/goolord/alpha-nvim) - A fast and fully customizable greeter for neovim
 
+* [vista.vim](https://github.com/liuchengxu/vista.vim) - View and search LSP symbols, tags in Vim/NeoVim
+
 ### Notice
 
 * Leaderf requires python support(see [Leaderf#Requirements](https://github.com/Yggdroot/LeaderF#requirements)). We can check this by using command beblow in vim:
