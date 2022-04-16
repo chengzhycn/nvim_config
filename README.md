@@ -99,6 +99,16 @@ git clone https://ghproxy.com/https://github.com/L3MON4D3/LuaSnip.git ~/.local/s
 nvim +PackerSync
 ```
 
+* Accelerate plugins updates:
+
+```fish
+# fish
+p=~/.local/share/nvim/site/pack/packer/start/ for dir in (ls $p); sed -i 's#url = https://github.com#url = https://ghproxy.com/https://github.com#' $p$dir/.git/config; end
+
+# bash && zsh
+ p=~/.local/share/nvim/site/pack/packer/start/; for dir in $(ls $p); do sed -i 's#url = https://github.com#url = https://ghproxy.com/https://github.com#' $p$dir/.git/config; done
+```
+
 ## Usage
 
 ```bash

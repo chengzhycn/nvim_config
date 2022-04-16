@@ -16,13 +16,13 @@
 -- This could make the display more compact or more spacious.
 -- e.g., more compact: ["▸ ", ""]
 -- Note: this option only works for the kind renderer, not the tree renderer
-vim.g.vista_icon_indent = '["╰─▸ ", "├─▸ "]'
+vim.g.vista_icon_indent = {"╰─▸ ", "├─▸ "}
 
 -- Executive used when opening vista sidebar without specifying it.
 -- See all the avaliable executives via `:echo g:vista#executives`.
 
--- TOOD: uncomment this line will cause some error, fix this later.
--- vim.g.vista_default_executive = 'nvim_lsp'
+-- TODO: ctags executives can't work on my ubuntu machine, find the reason later.
+vim.g.vista_default_executive = 'nvim_lsp'
 
 vim.g.vista_sidebar_open_cmd = '35vsplit'
 
