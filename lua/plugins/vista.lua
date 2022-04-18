@@ -35,8 +35,12 @@ vim.cmd [[let g:vista#renderer#enable_icon = 1]]
 vim.cmd [[
 let g:vista#renderer#icons = {
     \   "function": "\u0192",
+    \   "functions": "\u0192",
     \   "variable": "\uf00d",
+    \   "variables": "\uf00d",
     \   "prototype": "\uf013",
+    \   "prototypes": "\uf013",
     \   "macro": "\uf00b",
+    \   "macros": "\uf00b",
     \ }
     ]]
