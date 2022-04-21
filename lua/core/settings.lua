@@ -12,7 +12,7 @@ local fn = vim.fn               -- Call Vim functions
 -- Neovim UI
 -------------------------------------------------
 opt.number = true               -- Show line number
-opt.relativenumber = true       -- Show relative line number
+-- opt.relativenumber = true       -- Show relative line number
 opt.colorcolumn = '120'         -- Line length marker at 120 columns
 
 -------------------------------------------------
@@ -71,9 +71,10 @@ cmd [[autocmd BufWritePre * :%s/\s\+$//e]]
 cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]]
 
 -- Remove line lenght marker for selected filetypes
-cmd [[
-autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
-]]
+cmd [[autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0]]
 
 -- Close quickfix list when leaving quickfix buffer
 cmd [[autocmd BufLeave * if  &buftype == "quickfix" | q | endif]]
+
+-- Jump to the line the last known cursor postion when reopen.
+cmd [[autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
