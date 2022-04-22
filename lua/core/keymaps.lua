@@ -109,3 +109,7 @@ map('n', '<leader>j', ":LualineBuffersJump")    -- lualine buffer jump
 
 -- vista
 map('n', '<F8>', ":Vista!!<CR>")                -- toggle tag viewer
+
+-- toggleterm
+map('n', '<F10>', ":ToggleTerm direction=vertical<CR>")     -- toggle terminal vertically TODO: why <F11> don't work?
+map('n', '<F12>', ":ToggleTerm direction=horizontal<CR>")   -- toggle terminal horizontally

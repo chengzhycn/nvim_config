@@ -25,6 +25,7 @@ local load_plugins = function()
     require("plugins.indent-blankline")
     require("plugins.alpha-nvim")
     require("plugins.vista")
+    require("plugins.toggleterm")
 end
 
 -------------------------------------------------
@@ -105,6 +106,9 @@ require('packer').startup(function()
 
     -- Color schemes
     use 'navarasu/onedark.nvim'
+
+    -- Terminal
+    use "akinsho/toggleterm.nvim"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
