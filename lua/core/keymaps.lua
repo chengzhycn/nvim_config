@@ -111,5 +111,6 @@ map('n', '<leader>j', ":LualineBuffersJump")    -- lualine buffer jump
 map('n', '<F8>', ":Vista!!<CR>")                -- toggle tag viewer
 
 -- toggleterm
+map("n", "<F9>", "<cmd>lua _lazygit_toggle()<CR>")          -- toggle lazygit window
 map('n', '<F10>', ":ToggleTerm direction=vertical<CR>")     -- toggle terminal vertically TODO: why <F11> don't work?
 map('n', '<F12>', ":ToggleTerm direction=horizontal<CR>")   -- toggle terminal horizontally
