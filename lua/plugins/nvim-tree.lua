@@ -10,7 +10,7 @@
 require'nvim-tree'.setup {
   auto_reload_on_write = true,
   disable_netrw = false,
-  hide_root_folder = false,
+  -- hide_root_folder = false,
   hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
@@ -21,7 +21,7 @@ require'nvim-tree'.setup {
   update_cwd = false,
   view = {
     width = 30,
-    height = 30,
+    -- height = 30,
     side = "left",
     preserve_window_proportions = false,
     number = false,

@@ -82,6 +82,7 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 > ```
 > pip2 install --user --upgrade neovim
 > pip3 install --user --upgrade neovim
+>
 > ```
 >
 > See [如何使用 Python 编写 vim 插件](https://www.v2ex.com/t/410079).
@@ -91,6 +92,14 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 > :LeaderfInstallCExtension
 > ```
 
+```
+ # if failed, used command below
+ python3 -m pip install --user --upgrade pynvim
+ python -m pip uninstall neovim pynvim
+ python -m pip install --user --upgrade pynvim
+```
+
+
 * Copy the .clang-format file to the $HOME or root directory if you want to set IndentWidth to 4.
 
 ### Install plugins manually
@@ -99,6 +108,12 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 git clone https://ghproxy.com/https://github.com/L3MON4D3/LuaSnip.git ~/.local/share/nvim/site/pack/packer/start/LuaSnip
 
 nvim +PackerSync
+
+# fish
+for line in (cat ~/.config/nvim/plugin.list) ; git clone https://ghproxy.com/$line ~/.local/share/nvim/site/pack/packer/start/(string split -r -f2 -m1 / $line) ;end
+
+# bash/zsh
+for line in $(cat ~/.config/nvim/plugin.list); do git clone https://ghproxy.com/${line} ~/.local/share/nvim/site/pack/packer/start/${line##*/}; done
 ```
 
 * Accelerate plugins updates:
