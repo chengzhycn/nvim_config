@@ -14,8 +14,6 @@ require'nvim-tree'.setup {
   hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
-  ignore_buffer_on_setup = false,
-  open_on_setup = false,
   open_on_tab = false,
   sort_by = "name",
   update_cwd = false,
@@ -27,12 +25,6 @@ require'nvim-tree'.setup {
     number = false,
     relativenumber = false,
     signcolumn = "yes",
-    mappings = {
-      custom_only = false,
-      list = {
-        -- user mappings go here
-      },
-    },
   },
   hijack_directories = {
     enable = true,
@@ -43,7 +35,6 @@ require'nvim-tree'.setup {
     update_cwd = false,
     ignore_list = {},
   },
-  ignore_ft_on_setup = {},
   system_open = {
     cmd = nil,
     args = {},

@@ -31,7 +31,7 @@ chmod +x ~/.local/bin/rust-analyzer
 brew install lua-language-server        # for mac
 
 mkdir -p ~/.local/lua-language-server   # for linux
-curl -L https://ghproxy.com/https://github.com/sumneko/lua-language-server/releases/download/2.6.7/lua-language-server-2.6.7-linux-x64.tar.gz | tar -xz -C ~/.local/lua-language-server
+curl -L https://ghproxy.com/https://github.com/LuaLS/lua-language-server/releases/download/2.6.7/lua-language-server-2.6.7-linux-x64.tar.gz | tar -xz -C ~/.local/lua-language-server
 ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-language-server
 ```
 

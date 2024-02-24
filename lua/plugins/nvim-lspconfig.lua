@@ -92,8 +92,8 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 Rust --> rust_analyzer
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 
-Lua --> sumneko_lua
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua
+Lua --> lua_ls
+https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
 
 --]]
 
@@ -106,7 +106,7 @@ local servers = {
     clangd = {"clangd", "-fallback-style=Google"},
     gopls = {"gopls"},
     rust_analyzer = {"rust-analyzer"},
-    sumneko_lua = {"lua-language-server"}
+    lua_ls = {"lua-language-server"}
 }
 
 -- Call setup
