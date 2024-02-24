@@ -69,6 +69,30 @@ ln -s ~/.local/lua-language-server/bin/lua-language-server ~/.local/bin/lua-lang
 
 ### Notice
 
+2024.02.24 update:
+
+* If nvim starts with errors below:
+
+```
+Error detected while processing BufReadPost Autocommands for ""
+```
+
+We can use command below to check how to fix it:
+
+```
+:checkhealth
+```
+
+It may need to update the lspconfig:
+
+```
+:TSUpdate {lang}
+```
+
+* https://github.com/neovim/neovim/issues/26515
+
+---
+
 * Leaderf requires python support(see [Leaderf#Requirements](https://github.com/Yggdroot/LeaderF#requirements)). We can check this by using command beblow in vim:
 
 > ```
