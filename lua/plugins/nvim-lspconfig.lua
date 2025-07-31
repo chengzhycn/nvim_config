@@ -123,12 +123,12 @@ end
 
 -- Auto format on save.
 vim.api.nvim_exec([[
-    autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 1000)
+    autocmd BufWritePre *.py lua vim.lsp.buf.format()
 
-    autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
+    autocmd BufWritePre *.go lua vim.lsp.buf.format()
 
-    autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
+    autocmd BufWritePre *.rs lua vim.lsp.buf.format()
 
-    autocmd BufWritePre *.c lua vim.lsp.buf.formatting_sync(nil, 1000)
+    autocmd BufWritePre *.c lua vim.lsp.buf.format()
 
 ]], false)
